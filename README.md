@@ -1,11 +1,13 @@
-# Automobile Configuration Web Application
+# Automobile-Configuration-Platform
 
 ## Project Overview
 The goal of this project is to develop a web application that allows users to explore, search, and configure automobiles. The application will provide an intuitive interface for users to browse through a catalog of vehicles, apply filters based on their preferences, and view detailed configurations. The platform will be designed to meet the client's requirements for a modern, responsive, and user-friendly experience.
 
 ### Key Features:
 1. **Search Functionality**: Users can search for specific automobile models or brands.
+![image](https://github.com/user-attachments/assets/3555251e-3310-4d25-8498-a5556a529f3b)
 2. **Filtering Options**: Users can filter automobiles based on criteria such as price range, fuel type, transmission, and more.
+![image](https://github.com/user-attachments/assets/aa16f083-0511-46ff-9cbe-c411ff715cd9)
 3. **Configuration Details**: Users can view detailed configurations for each automobile, including specifications, features, and customization options.
 
 ---
