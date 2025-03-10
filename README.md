@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/96c1fe5d-58aa-48de-9dda-e513a015c3ac)# Automobile Configuration Web Application
-
 ## Project Overview
 The goal of this project is to develop a web application that allows users to explore, search, and configure automobiles. The application will provide an intuitive interface for users to browse through a catalog of vehicles, apply filters based on their preferences, and view detailed configurations. The platform will be designed to meet the client's requirements for a modern, responsive, and user-friendly experience.
 
