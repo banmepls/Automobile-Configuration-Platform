@@ -3,9 +3,10 @@ The goal of this project is to develop a web application that allows users to ex
 
 ### Key Features:
 1. **Search Functionality**: Users can search for specific automobile models or brands.
-   ![image](https://github.com/user-attachments/assets/1986897b-9e11-47e6-bb81-593ed353020d)
-3. **Filtering Options**: Users can filter automobiles based on criteria such as price range, fuel type, transmission, and more.
-4. **Configuration Details**: Users can view detailed configurations for each automobile, including specifications, features, and customization options.
+![image](https://github.com/user-attachments/assets/3555251e-3310-4d25-8498-a5556a529f3b)
+2. **Filtering Options**: Users can filter automobiles based on criteria such as price range, fuel type, transmission, and more.
+![image](https://github.com/user-attachments/assets/aa16f083-0511-46ff-9cbe-c411ff715cd9)
+3. **Configuration Details**: Users can view detailed configurations for each automobile, including specifications, features, and customization options.
 
 ---
 
