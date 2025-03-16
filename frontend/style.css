@@ -5,3 +5,33 @@
 .hidden {
     display: none;
 }
+
+.car-image-div {
+    width: 100%;
+    max-width: 533.33px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.car-image {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+}
+
+@media (max-width: 767.98px) {
+    .card-content {
+        flex-wrap: wrap-reverse;
+    }
+
+    .car-image-div {
+        width: 100%;
+        min-width: 150px;
+        margin: 0;
+    }
+
+    .car-image {
+        max-width: 100%;
+        max-height: 200px;
+    }
+}
