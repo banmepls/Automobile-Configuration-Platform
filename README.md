@@ -9,6 +9,7 @@ The goal of this project is to develop a web application that allows users to ex
 2. **Filtering Options**: Users can filter automobiles based on criteria such as price range, fuel type, transmission, and more.
 ![image](https://github.com/user-attachments/assets/aa16f083-0511-46ff-9cbe-c411ff715cd9)
 3. **Configuration Details**: Users can view detailed configurations for each automobile, including specifications, features, and customization options.
+![image](https://github.com/user-attachments/assets/430fd2a1-a0f9-4626-8c55-517b6cb4c8f1)
 
 ---
 
