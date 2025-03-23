@@ -16,31 +16,21 @@ The goal of this project is to develop a web application that allows users to ex
 ## Technical Specifications
 
 ### Frontend:
-- **Framework**: Bootstrap (for responsive and modern UI design).
+- **Framework**: Bootstrap.
 - **Languages**: HTML, CSS, JavaScript.
-- **Additional Tools**: jQuery for dynamic interactions (if needed).
 
 ### Backend:
-- **Framework**: Python Flask (for lightweight and efficient server-side logic).
-- **Database**: MongoDB (for flexible and scalable data storage).
-- **API Design**: RESTful APIs to handle communication between the frontend and backend.
+- **Framework**: Python Flask.
+- **Database**: MongoDB.
+- **API Design**: RESTful APIs.
 
 ### Hosting and Deployment:
-- **Containerization**: Docker (to ensure consistent deployment across environments).
-- **Hosting Platform**: To be determined if needed.
+- **Containerization**: Docker.
+- **Hosting**: Node.js.
 
 ### Plugins and Libraries:
-- **Frontend**: Bootstrap plugins for UI components (e.g., modals, carousels).
-- **Backend**: Flask extensions such as Flask-SQLAlchemy (for MongoDB integration) and Flask-WTF (for form handling).
-
----
-
-## Client Requirements
-1. **User-Friendly Interface**: The application must be easy to navigate, with a clean and modern design.
-2. **Responsive Design**: The application should work seamlessly on desktop, tablet, and mobile devices.
-3. **Scalability**: The backend and database should be designed to handle future growth in data and user traffic.
-4. **Performance**: Fast loading times and efficient search/filter functionality are critical.
-5. **Security**: Secure user data and prevent unauthorized access to sensitive information.
+- **Frontend**: Bootstrap plugins for UI components.
+- **Backend**: Flask extensions such as MongoClient and Flask.
 
 ---
 
@@ -89,9 +79,9 @@ docker compose up --build
 ```
 
 ### Step 3: Build and Run the Application
-- Frontend: Open your browser and go to http://localhost:3000 to access the frontend.
-- Backend: The Flask backend will be running on http://localhost:5000.
-- MongoDB: MongoDB will be accessible internally within the Docker network.
+- **Frontend**: Open your browser and go to http://localhost:3000 to access the frontend.
+- **Backend**: The Flask backend will be running on http://localhost:5000.
+- **MongoDB**: MongoDB will be accessible internally within the Docker network.
 
 
 ### Step 4: Stop the Application
