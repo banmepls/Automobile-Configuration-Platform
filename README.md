@@ -71,5 +71,35 @@ The goal of this project is to develop a web application that allows users to ex
 
 ---
 
+## How to Build and Run the Application
+
+### Prerequisites
+1. **Docker**: Ensure Docker is installed on your system.
+3. **Git**: Clone the repository to your local machine.
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/banmepls/Automobile-Configuration-Platform.git
+cd Automobile-Configuration-Platform
+```
+
+### Step 2: Access the Application
+```bash
+docker compose up --build
+```
+
+### Step 3: Build and Run the Application
+- Frontend: Open your browser and go to http://localhost:3000 to access the frontend.
+- Backend: The Flask backend will be running on http://localhost:5000.
+- MongoDB: MongoDB will be accessible internally within the Docker network.
+
+
+### Step 4: Stop the Application
+```bash
+docker compose down
+```
+
+---
+
 ## Conclusion
 This project aims to deliver a scalable, responsive, and user-friendly automobile configuration platform. By leveraging Bootstrap for the frontend, Python Flask for the backend, and MongoDB for the database, we ensure a robust and efficient solution. The use of Docker for deployment guarantees consistency and ease of management across environments.
