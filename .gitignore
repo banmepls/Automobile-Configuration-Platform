@@ -1,2 +1,3 @@
 .venv
-docker/mongodb/data
+backend/flaskapp/__pycache__
+backend/mongodb

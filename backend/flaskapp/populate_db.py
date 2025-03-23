@@ -1,24 +1,20 @@
 from pymongo import MongoClient
-from dotenv import load_dotenv
 import os
 
 
-load_dotenv()
-
-
-# client = MongoClient(os.getenv('MONGO_URI'))
 client = MongoClient(
-    host=os.getenv('MONGO_DOCKER'),
+    host=os.getenv('MONGO_URI'),
     authSource="admin"
 )
+
 
 db = client['automobile_db']
 collection = db['automobiles']
 print("Successfully connected to MongoDB.")
 
 
-# collection.delete_many({})
-# print("Successfully deleted all documents from the automobiles collection.")
+collection.delete_many({})
+print("Successfully deleted all documents from the automobiles collection.")
 
 
 automobiles = [

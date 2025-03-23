@@ -1,19 +1,20 @@
 from flask import Flask, jsonify, request
 from pymongo import MongoClient
-from dotenv import load_dotenv
 import os
 from flask_cors import CORS
-
-
-load_dotenv()
+from populate_db import *
 
 
 app = Flask(__name__)
 CORS(app)
 
 
-MONGO_URI = os.getenv('MONGO_URI')
-client = MongoClient(MONGO_URI)
+client = MongoClient(
+    host=os.getenv('MONGO_URI'),
+    authSource="admin"
+)
+
+
 db = client['automobile_db']
 collection = db['automobiles']
 

@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./backend/mongodb/data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  flask-app:
+    build: ./backend/flaskapp
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend/flaskapp:/app
+    environment:
+      FLASK_ENV: development
+      MONGO_URI: mongodb://root:example@mongodb:27017
+    depends_on:
+      - mongodb
+
+  nodejs:
+    build: ./frontend
+    container_name: nodejs
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/public:/app/public
+    environment:
+      NODE_ENV: development
+    networks:
+      - web
+
+volumes:
+  mongodb_data:
+
+
+networks:
+  web:
