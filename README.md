@@ -73,12 +73,12 @@ git clone https://github.com/banmepls/Automobile-Configuration-Platform.git
 cd Automobile-Configuration-Platform
 ```
 
-### Step 2: Access the Application
+### Step 2: Build the Application
 ```bash
 docker compose up --build
 ```
 
-### Step 3: Build and Run the Application
+### Step 3: Run the Application
 - **Frontend**: Open your browser and go to http://localhost:3000 to access the frontend.
 - **Backend**: The Flask backend will be running on http://localhost:5000.
 - **MongoDB**: MongoDB will be accessible internally within the Docker network.
