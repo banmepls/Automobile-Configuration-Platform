@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  # MongoDB Database Service
   mongodb:
     image: mongo:latest
     container_name: mongodb
@@ -12,6 +13,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
 
+  # Flask Backend API Service
   flask-app:
     build: ./backend/flaskapp
     container_name: flask-app
@@ -25,6 +27,7 @@ services:
     depends_on:
       - mongodb
 
+  # Node.js Frontend Service
   nodejs:
     build: ./frontend
     container_name: nodejs

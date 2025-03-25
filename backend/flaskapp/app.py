@@ -5,10 +5,12 @@ from flask_cors import CORS
 from populate_db import *
 
 
+# Create Flask application with CORS support
 app = Flask(__name__)
 CORS(app)
 
 
+# Connect to MongoDB using credentials from environment variables
 client = MongoClient(
     host=os.getenv('MONGO_URI'),
     authSource="admin"
@@ -19,12 +21,14 @@ db = client['automobile_db']
 collection = db['automobiles']
 
 
+# GET endpoint returning all automobile records
 @app.route('/api/automobiles', methods=['GET'])
 def get_automobiles():
     automobiles = list(collection.find({}, {'_id': 0}))
     return jsonify(automobiles)
 
 
+# Search endpoint with multiple filter options
 @app.route('/api/automobiles/search', methods=['GET'])
 def search_automobiles():
     query = request.args.get('query', '')

@@ -1,7 +1,9 @@
+# Database initialization script, runs automatically when imported by app.py
 from pymongo import MongoClient
 import os
 
 
+# Connect to MongoDB using credentials from environment variables
 client = MongoClient(
     host=os.getenv('MONGO_URI'),
     authSource="admin"
@@ -13,10 +15,12 @@ collection = db['automobiles']
 print("Successfully connected to MongoDB.")
 
 
+# Clear existing data to ensure consistency
 collection.delete_many({})
 print("Successfully deleted all documents from the automobiles collection.")
 
 
+# The new Automobile dataset to be inserted
 automobiles = [
     {
         "manufacturer": "BMW",

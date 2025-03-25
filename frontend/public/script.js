@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // DOM Element References
+    // Form controls
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
     const toggleFiltersButton = document.getElementById('toggleFiltersButton');
@@ -9,13 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const transmission = document.getElementById('transmission');
     const powerRange = document.getElementById('powerRange');
     const powerValue = document.getElementById('powerValue');
+
+    // Results Container
     const resultsDiv = document.getElementById('results');
 
 
+    // Timeout and filter section visibility
     let searchTimeout;
     let filtersVisible = false;
 
 
+    // Toggles visibility of the advanced filters section and updates button text and switch hidden class
     const toggleFilters = () => {
         filtersVisible = !filtersVisible;
         filtersSection.classList.toggle('hidden', !filtersVisible);
@@ -23,9 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
+    // Add corresponding event listener to the toggle filters button
     toggleFiltersButton.addEventListener('click', toggleFilters);
 
 
+    // Updates displayed price range and triggers search after 300ms delay
     priceRange.addEventListener('input', () => {
         priceValue.textContent = `0 - ${priceRange.value}`;
         clearTimeout(searchTimeout);
@@ -33,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    // Updates displayed power range and triggers search after 300ms delay
     powerRange.addEventListener('input', () => {
         powerValue.textContent = `0 - ${powerRange.value}`;
         clearTimeout(searchTimeout);
@@ -40,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    // Fetches automobiles from backend API with applied filters
     const fetchAutomobiles = async (filters = {}) => {
         const queryParams = new URLSearchParams(filters).toString();
         const response = await fetch(`http://localhost:5000/api/automobiles/search?${queryParams}`);
@@ -48,11 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
+    // Formats color names by replacing underscores with spaces
     const formatColorName = (color) => {
         return color.replace(/_/g, ' ');
     };
 
 
+    // Displays automobile search results in the UI
     const displayResults = (data) => {
         console.log(data);
         if (data.length === 0) {
@@ -94,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.color-select').forEach(select => {
             const carName = select.id.replace('colorSelect-', '');
 
+            // Restore saved color selection from localStorage if available
             const savedColor = localStorage.getItem(`color_${carName}`);
             if (savedColor) {
                 select.value = savedColor;
@@ -106,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById(`totalPrice-${carName}`).textContent = totalPrice.toFixed(2);
             }
 
+            // Updates car display when color selection changes
             select.addEventListener('change', (event) => {
                 const selectedColor = event.target.value;
                 const colorCost = parseFloat(event.target.selectedOptions[0].getAttribute('data-cost'));
@@ -117,12 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const totalPrice = basePrice + colorCost;
                 document.getElementById(`totalPrice-${carName}`).textContent = totalPrice.toFixed(2);
 
+                // Save color selection to localStorage
                 localStorage.setItem(`color_${carName}`, selectedColor);
             });
         });
     };
 
 
+    // Performs search with current filter values
     const searchAutomobiles = async () => {
         const filters = {
             query: searchInput.value.trim(),
@@ -138,11 +154,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
+    // Set up event listeners for search triggers
     searchButton.addEventListener('click', searchAutomobiles);
     priceRange.addEventListener('change', searchAutomobiles);
     fuelType.addEventListener('change', searchAutomobiles);
     transmission.addEventListener('change', searchAutomobiles);
     powerRange.addEventListener('change', searchAutomobiles);
 
+    // Initial search on page load
     searchAutomobiles();
 });

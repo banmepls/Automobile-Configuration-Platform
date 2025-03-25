@@ -19,6 +19,7 @@
     margin-top: 20px;
 }
 
+/* Responsive adjustments for mobile */
 @media (max-width: 767.98px) {
     .card-content {
         flex-wrap: wrap-reverse;

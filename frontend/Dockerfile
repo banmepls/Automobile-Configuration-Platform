@@ -1,3 +1,4 @@
+# Dockerfile for Node.js application
 FROM node:16
 
 WORKDIR /app
@@ -10,4 +11,5 @@ COPY . .
 
 EXPOSE 3000
 
+# Start application using npm
 CMD ["npm", "start"]
