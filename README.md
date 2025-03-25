@@ -54,7 +54,6 @@ The goal of this project is to develop a web application that allows users to ex
 ### Phase 4: Integration and Testing
 - Integrate the frontend and backend components.
 - Test the application for bugs, performance issues, and security vulnerabilities.
-- Gather feedback from the client and make necessary adjustments.
 
 ### Phase 5: Deployment
 - Containerize the application using Docker.
@@ -92,4 +91,4 @@ docker compose down
 ---
 
 ## Conclusion
-This project aims to deliver a scalable, responsive, and user-friendly automobile configuration platform. By leveraging Bootstrap for the frontend, Python Flask for the backend, and MongoDB for the database, we ensure a robust and efficient solution. The use of Docker for deployment guarantees consistency and ease of management across environments.
+This project aims to deliver a scalable, responsive, and user-friendly automobile configuration platform. By leveraging Bootstrap for the frontend, Python Flask for the backend, MongoDB for the database, and Node.js server for hosting the application, we ensure a robust and efficient solution. The use of Docker for deployment guarantees consistency and ease of management across environments.
